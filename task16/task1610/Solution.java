@@ -37,10 +37,8 @@ public class Solution {
 
         private void initAllKittens() throws InterruptedException {
             kitten1.start();
-
             kitten1.join();
             kitten2.start();
-
             kitten2.join();
         }
     }
