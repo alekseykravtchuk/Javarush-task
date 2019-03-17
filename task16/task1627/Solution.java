@@ -22,7 +22,7 @@ public class Solution {
         }
 
         protected Gamer gamer1 = new Gamer("Ivanov", 3);
-        protected Gamer gamer2 = new Gamer("Petrov", 1);
+        protected Gamer gamer2 = new Gamer("Petrov", 6);
         protected Gamer gamer3 = new Gamer("Sidorov", 5);
 
         public void run() {
