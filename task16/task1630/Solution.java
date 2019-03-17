@@ -1,7 +1,6 @@
 package com.javarush.task.task16.task1630;
 
 import java.io.*;
-import java.nio.BufferOverflowException;
 import java.util.Scanner;
 
 public class Solution {
