@@ -4,21 +4,23 @@ public class Solution {
     public static Thread.UncaughtExceptionHandler handler = new OurUncaughtExceptionHandler();
 
     public static void main(String[] args) {
+
         TestedThread commonThread = new TestedThread(handler);
 
         Thread threadA = new Thread(commonThread, "Нить 1");
         Thread threadB = new Thread(commonThread, "Нить 2");
-        Thread.setDefaultUncaughtExceptionHandler(handler);
+
         threadA.start();
         threadB.start();
 
         threadA.interrupt();
         threadB.interrupt();
+
     }
 
     public static class TestedThread extends Thread {
         public TestedThread(Thread.UncaughtExceptionHandler handler) {
-            setUncaughtExceptionHandler(handler);
+            setDefaultUncaughtExceptionHandler(handler);
             start();
         }
 
