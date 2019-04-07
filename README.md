@@ -1,4 +1,3 @@
-# task
 All completed tasks javarush
 
 # Java Core
