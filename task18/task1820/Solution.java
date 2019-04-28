@@ -15,15 +15,16 @@ public class Solution {
             FileInputStream fis = new FileInputStream(file1);
             FileOutputStream fos = new FileOutputStream(file2);
 
-            String line = "";
+            StringBuilder sb = new StringBuilder();
             while (fis.available() > 0) {
-                line += (char) fis.read();
+                sb.append(fis.read());
             }
+            String line = sb.toString();
 
-            String [] numbers = line.split(" ");
+            String [] numbers = " ".split(line);
 
-            for (int i = 0; i < numbers.length; i ++) {
-                double d = Double.parseDouble(numbers[i]);
+            for (String numb : numbers) {
+                double d = Double.parseDouble(numb);
                 fos.write((Math.round(d) + " ").getBytes());
             }
 
